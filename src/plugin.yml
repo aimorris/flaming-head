@@ -1,0 +1,10 @@
+name: FlamingHead
+version: 1.0.0
+author: Adam Morris
+description: Adds flame particles to a players head
+main: com.github.aimorris.minecraft_flaming_head.FlamingHead
+api-version: 1.15
+commands:
+  flaminghead:
+    description: Adds flaming particles to your head!
+    usage: /<command>
