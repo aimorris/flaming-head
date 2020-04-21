@@ -6,9 +6,9 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerLeave implements Listener {
 
-  FlamingHead plugin;
+  FireZeus plugin;
 
-  public PlayerLeave(FlamingHead plugin) { this.plugin = plugin; }
+  public PlayerLeave(FireZeus plugin) { this.plugin = plugin; }
 
   @EventHandler
   public void playerQuit(PlayerQuitEvent e) {

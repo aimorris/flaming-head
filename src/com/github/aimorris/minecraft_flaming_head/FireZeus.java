@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
-public class FlamingHead extends JavaPlugin {
+public class FireZeus extends JavaPlugin {
 
   Set<UUID> enabledPlayers = new HashSet<>();
 

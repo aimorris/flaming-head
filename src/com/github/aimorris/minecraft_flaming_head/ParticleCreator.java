@@ -10,9 +10,9 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class ParticleCreator extends BukkitRunnable {
 
-  FlamingHead plugin;
+  FireZeus plugin;
 
-  public ParticleCreator(FlamingHead plugin) {
+  public ParticleCreator(FireZeus plugin) {
     this.plugin = plugin;
   }
 
@@ -22,10 +22,10 @@ public class ParticleCreator extends BukkitRunnable {
       Player p = Bukkit.getPlayer(t);
       Location loc = p.getLocation();
 
-      PacketPlayOutWorldParticles packet = new PacketPlayOutWorldParticles(EnumParticle.FLAME,true, (float) (loc.getX() + Math.random() - 0.5), (float) (loc.getY() + 2.5 - Math.random()), (float) (loc.getZ() + Math.random() - 0.5), 0, 0, 0, 0, 1);
+      PacketPlayOutWorldParticles packet1 = new PacketPlayOutWorldParticles(EnumParticle.FLAME,true, (float) (loc.getX() + (Math.random() - 0.5)/1.5), (float) (loc.getY() + 2 - Math.random()/1.5), (float) (loc.getZ() + (Math.random() - 0.5)/1.5), 0, 0, 0, 0, 1);
 
       for(Player online : Bukkit.getOnlinePlayers()) {
-        ((CraftPlayer)online).getHandle().playerConnection.sendPacket(packet);
+        ((CraftPlayer)online).getHandle().playerConnection.sendPacket(packet1);
       }
     });
   }
