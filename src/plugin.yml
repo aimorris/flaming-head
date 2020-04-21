@@ -2,7 +2,7 @@ name: FireZeus
 version: 1.0.0
 author: Adam Morris
 description: Adds flame particles to a players head
-main: com.github.aimorris.minecraft_fire_zeus.FireZeus
+main: com.github.aimorris.minecraft_flaming_head.FireZeus
 api-version: 1.15
 commands:
   firezeus:

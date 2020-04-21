@@ -17,7 +17,7 @@ public class FireZeus extends JavaPlugin {
 
     Bukkit.getServer().getPluginManager().registerEvents(new PlayerLeave(this), this);
 
-    this.getCommand("flaminghead").setExecutor(new CommandHandler(this));
+    this.getCommand("firezeus").setExecutor(new CommandHandler(this));
 
     ParticleCreator particleCreator = new ParticleCreator(this);
     particleCreator.runTaskTimer(this, 0 ,1);

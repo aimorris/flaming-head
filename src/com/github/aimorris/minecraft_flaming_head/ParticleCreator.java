@@ -1,10 +1,8 @@
 package com.github.aimorris.minecraft_flaming_head;
 
-import net.minecraft.server.v1_8_R3.EnumParticle;
-import net.minecraft.server.v1_8_R3.PacketPlayOutWorldParticles;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -22,11 +20,11 @@ public class ParticleCreator extends BukkitRunnable {
       Player p = Bukkit.getPlayer(t);
       Location loc = p.getLocation();
 
-      PacketPlayOutWorldParticles packet1 = new PacketPlayOutWorldParticles(EnumParticle.FLAME,true, (float) (loc.getX() + (Math.random() - 0.5)/1.5), (float) (loc.getY() + 2 - Math.random()/1.5), (float) (loc.getZ() + (Math.random() - 0.5)/1.5), 0, 0, 0, 0, 1);
+      double x = loc.getX() + (Math.random() - 0.5)/1.5;
+      double y = loc.getY() + 2 - Math.random()/1.5;
+      double z = loc.getZ() + (Math.random() - 0.5)/1.5;
 
-      for(Player online : Bukkit.getOnlinePlayers()) {
-        ((CraftPlayer)online).getHandle().playerConnection.sendPacket(packet1);
-      }
+      p.getWorld().spawnParticle(Particle.FLAME, x, y, z, 0);
     });
   }
 }
