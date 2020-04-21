@@ -17,7 +17,7 @@ public class FlamingHead extends JavaPlugin {
     this.getCommand("flaminghead").setExecutor(new CommandHandler(this));
 
     ParticleCreator particleCreator = new ParticleCreator(this);
-    particleCreator.runTaskTimer(this, 0 ,20);
+    particleCreator.runTaskTimer(this, 0 ,1);
   }
 
   @Override
