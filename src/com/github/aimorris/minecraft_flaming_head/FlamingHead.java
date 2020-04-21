@@ -14,6 +14,9 @@ public class FlamingHead extends JavaPlugin {
   @Override
   public void onEnable() {
     Bukkit.getServer().getLogger().info("FlamingHead has been successfully enabled!");
+
+    Bukkit.getServer().getPluginManager().registerEvents(new PlayerLeave(this), this);
+
     this.getCommand("flaminghead").setExecutor(new CommandHandler(this));
 
     ParticleCreator particleCreator = new ParticleCreator(this);
